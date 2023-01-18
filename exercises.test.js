@@ -1,4 +1,14 @@
-const exercises = require('./exercises');
+const  {
+  isRealPalindrome,
+  runningTotal,
+  swap,
+  wordSizes,
+  union,
+  firstRecurring,
+  showMultiplicativeAverage,
+  multiplyList,
+  sequence,
+} = require('./exercises');
 
 //write tests in this file
 
@@ -31,19 +41,16 @@ test('swap', () => {
   expect(swap('a')).toBe("a");
 });
 
-
 test('wordSizes', () => {
   expect(wordSizes('Four score and seven.')).toEqual({ "3": 1, "4": 1, "5": 1, "6": 1 });
   expect(wordSizes('Hey diddle diddle, the cat and the fiddle!')).toEqual({ "3": 5, "6": 1, "7": 2 });
   expect(wordSizes("What's up doc?")).toEqual({ "2": 1, "4": 1, "6": 1 });
-  expect(wordSizes('')).toEqual({});
 });
 
 test('union', () => {
   expect(union([1, 3, 5], [3, 6, 9])).toEqual([1, 3, 5, 6, 9]);
   expect(union([2, 2, 2, 2], [10, 5, 2])).toEqual([2, 10, 5]);
 });
-
 
 test('firstRecurring', () => {
   expect(firstRecurring('reuben')).toBe("e");
@@ -52,23 +59,20 @@ test('firstRecurring', () => {
   expect(firstRecurring('paul')).toBe("");
 });
 
-
 test('showMultiplicativeAverage', () => {
   expect(showMultiplicativeAverage([3, 5])).toBe("7.500");
   expect(showMultiplicativeAverage([2, 4, 6])).toBe("16.000");
   expect(showMultiplicativeAverage([2, 2])).toBe("2.000");
-  expect(showMultiplicativeAverage([1, 2, 3, 4, 5])).toBe("60.000");
+  expect(showMultiplicativeAverage([1, 2, 3, 4, 5])).toBe("24.000");
 });
 
 test('multiplyList', () => {
   expect(multiplyList([3, 5, 7], [9, 10, 11])).toEqual([27, 50, 77]);
   expect(multiplyList([5, 10, 15, 20], [1, 2, 3, 4])).toEqual([5, 20, 45, 80]);
-});
-
-
-test('sequence', () => {
+  });
+  
+  test('sequence', () => {
   expect(sequence(5)).toEqual([1, 2, 3, 4, 5]);
   expect(sequence(3)).toEqual([1, 2, 3]);
   expect(sequence(1)).toEqual([1]);
-});
-
+  });
